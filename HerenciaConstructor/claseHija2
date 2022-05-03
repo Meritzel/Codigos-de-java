@@ -1,0 +1,19 @@
+package classHerenciaConstructor;
+
+public class mujeres extends alumnosGeneral {
+    private double porcentajeMujeres;
+
+    public mujeres(int numeroHombres, int numeroMujeres, int totalAlumnos, double porcentajeMujeres) {
+        super(numeroHombres, numeroMujeres, totalAlumnos);
+        this.porcentajeMujeres = porcentajeMujeres;
+    }
+
+    public void calcularPorcentajeMujeres(){
+        this.porcentajeMujeres = numeroMujeres*100/totalAlumnos;
+    }
+
+    public double getPorcentajeMujeres() {
+        return this.porcentajeMujeres;
+    }
+
+}
