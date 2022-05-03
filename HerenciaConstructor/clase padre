@@ -1,0 +1,21 @@
+package classHerenciaConstructor;
+
+public abstract class  alumnosGeneral {
+    protected int numeroHombres;
+    protected int numeroMujeres;
+    protected int totalAlumnos;
+
+    public alumnosGeneral(int numeroHombres, int numeroMujeres, int totalAlumnos){
+        this.numeroHombres = numeroHombres;
+        this.numeroMujeres = numeroMujeres;
+        this.totalAlumnos = totalAlumnos;
+    }
+
+    public void calcularTotalAlumnos(){
+        this.totalAlumnos = numeroHombres + numeroMujeres;
+    }
+
+    public double getTotalAlumnos(){
+        return this.totalAlumnos;
+    }
+}
