@@ -1,0 +1,44 @@
+public class alumnos {
+    private int hombres;
+    private int totalAlumnos;
+    private double porHombres;
+
+    public alumnos( int hombres, int totalAlumnos){
+        this.hombres=hombres;
+        this.totalAlumnos=totalAlumnos;
+        this.calcularPorHombres();
+    }
+
+    public int getHombres() {
+        return hombres;
+    }
+
+    public void setHombres(int hombres) {
+        this.hombres = hombres;
+    }
+
+    public int getTotalAlumnos() {
+        return totalAlumnos;
+    }
+
+    public void setTotalAlumnos(int totalAlumnos) {
+        this.totalAlumnos = totalAlumnos;
+    }
+
+    public double getPorHombres() {
+        return porHombres;
+    }
+
+    public void setPorHombres(double porHombres) {
+        this.porHombres = porHombres;
+    }
+
+    public void calcularPorHombres(){
+        this.porHombres = this.hombres*100/this.totalAlumnos;
+    }
+
+    public static void main(String[] args){
+        alumnos alumnos = new alumnos(30,80);
+        System.out.println(alumnos.getPorHombres());
+    }
+}
