@@ -1,0 +1,15 @@
+public float algoritmo1(float n) {
+
+    long tiempo_inicial = time();
+    float suma= 0;
+    for(float x = 1; x n+1; x++){
+        suma += x;
+    }
+
+    long tiempo_final = time();
+    long tiempo_ejecucion = tiempo_final - tiempo_inicial;
+    System.out.println("Tiempo de ejecucion en nanosegundos: " + tiempo_ejecucion);
+    System.out.println("Tiempo de ejecucion en milisegundos: " + tiempo_ejecucion/1000000);
+    return suma;
+    }
+}
