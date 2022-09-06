@@ -1,0 +1,10 @@
+public float algoritmo2(float n){
+
+    long tiempo_inicial=System.nanoTime();
+    float suma=(n*(n+1))/2;
+    long tiempo_final=nanoTime();
+    long tiempo_ejecucion=tiempo_final-tiempo_inicial;
+
+    System.out.println("tiempo de ejecion en nanosegundos: " +tiempo_ejecucion);
+    System.out.println("tiempo de ejecion en milisegundos: " +tiempo_ejecucion/1000000);
+}
