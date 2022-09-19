@@ -1,0 +1,15 @@
+public class TorreHanoi{
+    public static void main(String[] ags) {
+        torre(3,1,2,3);
+        }
+
+        private static void torre(int discos,int torre1,int torre2,int torre3){
+            if(discos==1) {
+                System.out.println("mover disco de torre " + torre1 + " a torre "+ torre3); //fin ejecucion
+            }else{
+                torre(discos -1,torre1, torre3, torre2); 
+                System.out.println("mover disco de torre " + torre1 + " a torre" + torre3);
+                torre(discos -1,torre2, torre1,torre3); 
+            }
+        }
+    }
