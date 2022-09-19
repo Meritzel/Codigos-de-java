@@ -1,0 +1,33 @@
+install.packages("lpSolve")
+
+# Importar la libreria
+library(lpSolve)
+
+# Se guardan en una matriz los coeficientes de la función objetivo
+funcion_objetivo <- c(89000, 23000)
+funcion_objetivo
+
+# Asignar los coeficientes de las desigualdades
+# 9x1 + 4x2  <= 280       9   4     (1)
+# 4x1 + 3X2  <= 340       4   3     (2)
+# Definir el número de filas en 3
+restriciones_derecho <- matrix(c(9,4,4,3), nrow = 2, byrow = T)
+
+# Se muestra el valor de la matriz
+restriciones_derecho
+
+# Se guarda en una matriz los simbolos de las desigualdades
+restriccion.direccion <- c("<=", "<=")
+restriccion.direccion
+# Asignar los valores del lado derecho de las desiguldades
+# 9x1 + 4x2  <= 280       9   4     (1)
+# 4x1 + 3X2  <= 340       4   3     (2)
+lado_derecho.restriccion <- c(280,340)
+lado_derecho.restriccion
+
+# Se ejecuta la instrucción para mostrar el resultado que maximize la función
+lp(direction = "max", objective.in = funcion_objetivo, const.mat =restriciones_derecho, const.dir = restriccion.direccion, const.rhs = lado_derecho.restriccion, int.vec = c(1, 2, 3, 4, 5), all.int = T)
+
+# Se ejecuta la instrucción para mostrar los valores de x1 y x2.
+lp(direction = "max", objective.in = funcion_objetivo, const.mat =restriciones_derecho, const.dir = restriccion.direccion, const.rhs = lado_derecho.restriccion, int.vec = c(1, 2, 3, 4, 5), all.int = T)$solution
+z
